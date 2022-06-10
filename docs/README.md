@@ -2,4 +2,5 @@
 
 This library is generated with [`k8s`](https://github.com/jsonnet-libs/k8s).
 
-[Docs](https://jsonnet-libs.github.io/vertical-pod-autoscaler-libsonnet)
+- [0.10](0.10/README.md)
+- [0.11](0.11/README.md)
