@@ -22,8 +22,6 @@ permalink: /0.10/autoscaling/v1beta2/verticalPodAutoscaler/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -35,6 +33,13 @@ permalink: /0.10/autoscaling/v1beta2/verticalPodAutoscaler/
   * [`obj spec.resourcePolicy`](#obj-specresourcepolicy)
     * [`fn withContainerPolicies(containerPolicies)`](#fn-specresourcepolicywithcontainerpolicies)
     * [`fn withContainerPoliciesMixin(containerPolicies)`](#fn-specresourcepolicywithcontainerpoliciesmixin)
+    * [`obj spec.resourcePolicy.containerPolicies`](#obj-specresourcepolicycontainerpolicies)
+      * [`fn withContainerName(containerName)`](#fn-specresourcepolicycontainerpolicieswithcontainername)
+      * [`fn withMaxAllowed(maxAllowed)`](#fn-specresourcepolicycontainerpolicieswithmaxallowed)
+      * [`fn withMaxAllowedMixin(maxAllowed)`](#fn-specresourcepolicycontainerpolicieswithmaxallowedmixin)
+      * [`fn withMinAllowed(minAllowed)`](#fn-specresourcepolicycontainerpolicieswithminallowed)
+      * [`fn withMinAllowedMixin(minAllowed)`](#fn-specresourcepolicycontainerpolicieswithminallowedmixin)
+      * [`fn withMode(mode)`](#fn-specresourcepolicycontainerpolicieswithmode)
   * [`obj spec.targetRef`](#obj-spectargetref)
     * [`fn withApiVersion(apiVersion)`](#fn-spectargetrefwithapiversion)
     * [`fn withKind(kind)`](#fn-spectargetrefwithkind)
@@ -158,24 +163,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -259,6 +246,62 @@ withContainerPoliciesMixin(containerPolicies)
 "Per-container resource policies."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.resourcePolicy.containerPolicies
+
+"Per-container resource policies."
+
+### fn spec.resourcePolicy.containerPolicies.withContainerName
+
+```ts
+withContainerName(containerName)
+```
+
+"Name of the container or DefaultContainerResourcePolicy, in which case the policy is used by the containers that don't have their own policy specified."
+
+### fn spec.resourcePolicy.containerPolicies.withMaxAllowed
+
+```ts
+withMaxAllowed(maxAllowed)
+```
+
+"Specifies the maximum amount of resources that will be recommended for the container. The default is no maximum."
+
+### fn spec.resourcePolicy.containerPolicies.withMaxAllowedMixin
+
+```ts
+withMaxAllowedMixin(maxAllowed)
+```
+
+"Specifies the maximum amount of resources that will be recommended for the container. The default is no maximum."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.resourcePolicy.containerPolicies.withMinAllowed
+
+```ts
+withMinAllowed(minAllowed)
+```
+
+"Specifies the minimal amount of resources that will be recommended for the container. The default is no minimum."
+
+### fn spec.resourcePolicy.containerPolicies.withMinAllowedMixin
+
+```ts
+withMinAllowedMixin(minAllowed)
+```
+
+"Specifies the minimal amount of resources that will be recommended for the container. The default is no minimum."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.resourcePolicy.containerPolicies.withMode
+
+```ts
+withMode(mode)
+```
+
+"Whether autoscaler is enabled for the container. The default is \"Auto\"."
 
 ## obj spec.targetRef
 
