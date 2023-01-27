@@ -30,6 +30,7 @@ permalink: /0.10/autoscaling/v1beta2/verticalPodAutoscaler/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
+  * [`fn withTargetRef(object)`](#fn-specwithtargetref)
   * [`obj spec.resourcePolicy`](#obj-specresourcepolicy)
     * [`fn withContainerPolicies(containerPolicies)`](#fn-specresourcepolicywithcontainerpolicies)
     * [`fn withContainerPoliciesMixin(containerPolicies)`](#fn-specresourcepolicywithcontainerpoliciesmixin)
@@ -224,6 +225,14 @@ withUid(uid)
 ## obj spec
 
 "Specification of the behavior of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status."
+
+### fn spec.withTargetRef
+
+```ts
+withTargetRef(object)
+```
+
+Set spec.TargetRef to `object`
 
 ## obj spec.resourcePolicy
 

@@ -32,6 +32,7 @@ permalink: /0.11/autoscaling/v1/verticalPodAutoscaler/
 * [`obj spec`](#obj-spec)
   * [`fn withRecommenders(recommenders)`](#fn-specwithrecommenders)
   * [`fn withRecommendersMixin(recommenders)`](#fn-specwithrecommendersmixin)
+  * [`fn withTargetRef(object)`](#fn-specwithtargetref)
   * [`obj spec.recommenders`](#obj-specrecommenders)
     * [`fn withName(name)`](#fn-specrecommenderswithname)
   * [`obj spec.resourcePolicy`](#obj-specresourcepolicy)
@@ -250,6 +251,14 @@ withRecommendersMixin(recommenders)
 "Recommender responsible for generating recommendation for this object. List should be empty (then the default recommender will generate the recommendation) or contain exactly one recommender."
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.withTargetRef
+
+```ts
+withTargetRef(object)
+```
+
+Set spec.TargetRef to `object`
 
 ## obj spec.recommenders
 
